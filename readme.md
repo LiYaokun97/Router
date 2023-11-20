@@ -2,23 +2,11 @@
 
 
 
-这里只实现了activity的跳转，未实现fragment等的路由，下图以activity为例子，说明了整体的思路。
+## 必备背景知识介绍
 
-在编译期，通过注解处理技术，对自定义注解@Destination进行解析，生成对应的子工程映射表，在大型项目中，还必须考虑到多模块，必须使用字节码技术将所有的子工程映射表收集，得到总映射表。
+### **APT介绍**
 
-运行期，在有跳转请求时，先加载总映射表（如果为加载的话）然后找到对应类，解析参数，最后实现跳转。
-
-
-
-![design](/readmeImage/design.jpg)
-
-
-
-
-
-# **APT介绍**
-
-## APT的理解
+#### APT的理解
 
 现在有很多主流库都用上了 APT，比如 Dagger2, ButterKnife, EventBus3 等
 
@@ -61,7 +49,7 @@ APT还有两个特点：
 
   
 
-## **APT的原理**
+#### **APT的原理**
 
 我们先来看下Java的编译过程：
 
@@ -167,7 +155,41 @@ public class TestProcessor extends AbstractProcessor {
 
 
 
+### ASM 字节码插桩
+
+**简单说一下原理**
+
+所谓字节码插桩其实就是在编译打包时对字节码进行操作，Android的编译是通过gradle，那么就需要用到gradle相关的知识，操作字节码就需要用到字节码相关的工具，功能比较强大且灵活的非ASM莫属，那就一步到位用ASM。
+
+Android编译打包过程可以简述为：**java文件-》class文件-》dex文件**。我们插桩就是在class文件转dex的时候，dex文件里就是存放字节码的。
+
+具体的字节码插桩实践可以看该文：https://juejin.cn/post/7129381154121056292
+
+
+
+ASM document [3] 中详细介绍了相关的类，及使用方法
+
+
+
+
+
+## Router 实现
+
+这里只实现了activity的跳转，未实现fragment等的路由，下图以activity为例子，说明了整体的思路。
+
+在编译期，通过注解处理技术，对自定义注解@Destination进行解析，生成对应的子工程映射表，在大型项目中，还必须考虑到多模块，必须使用字节码技术将所有的子工程映射表收集，得到总映射表。
+
+运行期，在有跳转请求时，先加载总映射表（如果为加载的话）然后找到对应类，解析参数，最后实现跳转。
+
+
+
+![design](/readmeImage/design.jpg)
+
 ## Reference
 
-胡飞洋. (2022, November 8). *“终于懂了” 系列：组件化框架 ARouter 完全解析（二）APT技术*. https://cloud.tencent.com/developer/article/2154577
+[1] 胡飞洋. (2022, November 8). *“终于懂了” 系列：组件化框架 ARouter 完全解析（二）APT技术*. https://cloud.tencent.com/developer/article/2154577
+
+[2] 山头火. (2022, August 8). *Android ASM字节码插桩实践*. https://juejin.cn/post/7129381154121056292
+
+[3] *ASM*. https://asm.ow2.io/documentation.html
 
