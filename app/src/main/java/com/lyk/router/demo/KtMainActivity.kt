@@ -1,7 +1,7 @@
-package com.imooc.router.demo
+package com.lyk.router.demo
 
 import android.app.Activity
-import com.imooc.router.annotations.Destination
+import com.lyk.router.annotations.Destination
 
 @Destination(
         url = "router://page-kotlin",

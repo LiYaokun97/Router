@@ -1,2 +1,2 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.imooc.gradle.sample.biz.reading" />
+    package="com.lyk.gradle.sample.biz.reading" />

@@ -1,4 +1,4 @@
-package com.imooc.router.annotations;
+package com.lyk.router.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,4 +1,4 @@
-package asm.com.imooc.router.demo.sample;
+package asm.com.lyk.router.demo.sample;
 
 import java.util.*;
 
@@ -14,7 +14,7 @@ public class RouterMappingDump implements Opcodes {
         AnnotationVisitor av0;
 
         cw.visit(V1_7, ACC_PUBLIC + ACC_SUPER,
-            "com/imooc/router/demo/sample/RouterMapping",
+            "com/lyk/router/demo/sample/RouterMapping",
             null,
             "java/lang/Object", null);
 
@@ -33,7 +33,7 @@ public class RouterMappingDump implements Opcodes {
             Label l1 = new Label();
             mv.visitLabel(l1);
             mv.visitLocalVariable("this",
-                "Lcom/imooc/router/demo/sample/RouterMapping;", null, l0, l1, 0);
+                "Lcom/lyk/router/demo/sample/RouterMapping;", null, l0, l1, 0);
             mv.visitMaxs(1, 1);
             mv.visitEnd();
         }
@@ -55,7 +55,7 @@ public class RouterMappingDump implements Opcodes {
             mv.visitLineNumber(12, l1);
             mv.visitVarInsn(ALOAD, 0);
             mv.visitMethodInsn(INVOKESTATIC,
-                "com/imooc/router/demo/sample/RouterMapping_1", "get",
+                "com/lyk/router/demo/sample/RouterMapping_1", "get",
                 "()Ljava/util/Map;", false);
             mv.visitMethodInsn(INVOKEINTERFACE,
             "java/util/Map", "putAll", "(Ljava/util/Map;)V", true);
@@ -64,7 +64,7 @@ public class RouterMappingDump implements Opcodes {
             mv.visitLineNumber(14, l2);
             mv.visitVarInsn(ALOAD, 0);
             mv.visitMethodInsn(INVOKESTATIC,
-                    "com/imooc/router/demo/sample/RouterMapping_2",
+                    "com/lyk/router/demo/sample/RouterMapping_2",
                     "get", "()Ljava/util/Map;", false);
             mv.visitMethodInsn(INVOKEINTERFACE,
                     "java/util/Map", "putAll", "(Ljava/util/Map;)V", true);

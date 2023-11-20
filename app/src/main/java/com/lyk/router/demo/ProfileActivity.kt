@@ -1,4 +1,4 @@
-package com.imooc.router.demo
+package com.lyk.router.demo
 
 import android.app.Activity
 import android.graphics.Color
@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.view.Gravity
 import android.view.ViewGroup
 import android.widget.TextView
-import com.imooc.router.annotations.Destination
+import com.lyk.router.annotations.Destination
 
 @Destination(
-        url = "router://imooc/profile",
+        url = "router://lyk/profile",
         description = "个人信息"
 )
 class ProfileActivity : Activity() {

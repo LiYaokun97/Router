@@ -1,4 +1,4 @@
-package com.imooc.router.gradle
+package com.lyk.router.gradle
 
 class RouterExtension {
     String wikiDir

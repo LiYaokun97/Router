@@ -1,4 +1,4 @@
-package com.imooc.router.gradle
+package com.lyk.router.gradle
 
 import org.objectweb.asm.ClassWriter
 import org.objectweb.asm.MethodVisitor
@@ -7,7 +7,7 @@ import org.objectweb.asm.Opcodes
 class RouterMappingByteCodeBuilder implements Opcodes {
 
     public static final String CLASS_NAME =
-            "com/imooc/router/mapping/generated/RouterMapping"
+            "com/lyk/router/mapping/generated/RouterMapping"
 
     static byte[] get(Set<String> allMappingNames) {
         // 1. 创建一个类
@@ -65,7 +65,7 @@ class RouterMappingByteCodeBuilder implements Opcodes {
 
             mv.visitVarInsn(ALOAD, 0)
             mv.visitMethodInsn(INVOKESTATIC,
-                      "com/imooc/router/mapping/$it",
+                      "com/lyk/router/mapping/$it",
                        "get", "()Ljava/util/Map;", false)
             mv.visitMethodInsn(INVOKEINTERFACE,
                 "java/util/Map",

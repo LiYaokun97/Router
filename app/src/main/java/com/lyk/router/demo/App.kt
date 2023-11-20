@@ -1,7 +1,7 @@
-package com.imooc.router.demo
+package com.lyk.router.demo
 
 import android.app.Application
-import com.imooc.gradle.router.runtime.Router
+import com.lyk.gradle.router.runtime.Router
 
 class App : Application() {
 

@@ -1,4 +1,4 @@
-package com.imooc.gradle.sample.biz.reading
+package com.lyk.gradle.sample.biz.reading
 
 import org.junit.Test
 

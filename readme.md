@@ -11,3 +11,34 @@
 
 
 ![design](/readmeImage/design.jpg)
+
+
+
+## Android APT
+
+安卓AOP三剑客: APT, AspectJ, Javassist
+
+
+
+![Android APT 技术浅谈_java](https://s2.51cto.com/images/blog/202109/09/0c28d76f56544caf3f513c6f02a42e56.jpeg?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=/format,webp/resize,m_fixed,w_1184)
+
+
+
+APT(Annotation Processing Tool 的简称)，可以在代码编译期解析注解，并且生成新的 Java 文件，减少手动的代码输入。现在有很多主流库都用上了 APT，比如 Dagger2, ButterKnife, EventBus3 等
+
+代表框架：
+
+- DataBinding
+- Dagger2
+- ButterKnife
+- EventBus3
+- DBFlow
+
+
+
+
+
+## Reference
+
+胡飞洋. (2022, November 8). *“终于懂了” 系列：组件化框架 ARouter 完全解析（二）APT技术*. https://cloud.tencent.com/developer/article/2154577
+

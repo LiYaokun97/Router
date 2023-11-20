@@ -1,11 +1,11 @@
-package com.imooc.router.demo;
+package com.lyk.router.demo;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.imooc.gradle.router.runtime.Router;
-import com.imooc.router.annotations.Destination;
+import com.lyk.gradle.router.runtime.Router;
+import com.lyk.router.annotations.Destination;
 
 @Destination(
         url = "router://page-home",
@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Router.INSTANCE.go(v.getContext(),
-                        "router://imooc/profile?name=imooc&message=hello");
+                        "router://lyk/profile?name=lyk&message=hello");
             }
         });
     }

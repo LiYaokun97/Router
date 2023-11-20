@@ -26,7 +26,7 @@ uploadArchives {
             repository(url: uri('../repo')) {
 
                 // 设置groupId，通常为包名
-                pom.groupId = 'com.imooc.router'
+                pom.groupId = 'com.lyk.router'
 
                 // 设置artifactId，为当前插件的名称
                 pom.artifactId = 'router-gradle-plugin'

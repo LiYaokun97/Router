@@ -1,4 +1,4 @@
-package com.imooc.gradle.router.runtime
+package com.lyk.gradle.router.runtime
 
 import org.junit.Test
 

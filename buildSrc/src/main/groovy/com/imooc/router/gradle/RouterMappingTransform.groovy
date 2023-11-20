@@ -1,4 +1,4 @@
-package com.imooc.router.gradle
+package com.lyk.router.gradle
 
 import com.android.build.api.transform.Format
 import com.android.build.api.transform.QualifiedContent

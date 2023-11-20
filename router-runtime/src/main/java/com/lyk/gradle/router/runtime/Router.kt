@@ -1,4 +1,4 @@
-package com.imooc.gradle.router.runtime
+package com.lyk.gradle.router.runtime
 
 import android.content.Context
 import android.content.Intent
@@ -12,7 +12,7 @@ object Router {
 
     // 编译期间生成的总映射表
     private const val GENERATED_MAPPING =
-            "com.imooc.router.mapping.generated.RouterMapping"
+            "com.lyk.router.mapping.generated.RouterMapping"
 
     // 存储所有映射表信息
     private val mapping: HashMap<String, String> = HashMap()
@@ -46,7 +46,7 @@ object Router {
         }
 
         // 匹配URL，找到目标页面
-        // router://imooc/profile?name=imooc&message=hello
+        // router://lyk/profile?name=lyk&message=hello
 
         val uri = Uri.parse(url)
         val scheme = uri.scheme

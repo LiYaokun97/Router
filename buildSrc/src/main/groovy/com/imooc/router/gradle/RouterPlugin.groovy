@@ -1,4 +1,4 @@
-package com.imooc.router.gradle
+package com.lyk.router.gradle
 
 import com.android.build.api.transform.Transform
 import com.android.build.gradle.AppExtension
