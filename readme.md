@@ -169,6 +169,49 @@ Android编译打包过程可以简述为：**java文件-》class文件-》dex文
 
 ASM document [3] 中详细介绍了相关的类，及使用方法
 
+Android ASM快速入门 （实现了activity生命周期方法开始、结束打印日志）  https://www.jianshu.com/p/d5333660e312
+
+AOP（Aspect-Oriented Programming，面向切面编程) https://www.jianshu.com/p/1109a4724b16
+
+
+
+### Transform
+
+
+在 Android Gradle 插件中，Transform 是一种用于处理和修改 Android 项目的字节码或资源的机制。Transform 提供了一种在编译期间修改 APK 构建过程的方式，允许开发者对应用进行各种操作，例如代码注入、字节码增强、资源处理等。
+
+Transform 主要用于在 Android Gradle 构建流程的两个阶段进行操作：
+
+1. **输入阶段（Input Phase）：** Transform 可以接收项目的输入，包括源代码、字节码、资源文件等。在这个阶段，Transform 可以读取和处理这些输入，并且可以输出修改后的结果。
+2. **输出阶段（Output Phase）：** Transform 的输出会被合并到最终的 APK 中。这些输出可以包括修改过的字节码、资源文件等。在输出阶段，Transform 生成的文件会与其他 Transform 生成的文件一起组成最终的 APK。
+
+在 Android Gradle 插件中，Transform 通常与 Gradle 的 `com.android.application` 或 `com.android.library` 插件一起使用。你可以通过在模块的 `build.gradle` 文件中配置 `android` 块下的 `transform` 属性来指定使用哪些 Transform。以下是一个简单的例子：
+
+```groovy
+gradleCopy codeandroid {
+    ...
+    transformClassesWith MyCustomTransform
+}
+```
+
+在这个例子中，`MyCustomTransform` 是一个自定义的 Transform 类。你可以实现自己的 Transform 类，继承自 `Transform` 接口，并重写相关的方法来定义你的转换逻辑。
+
+Transform 的主要优势包括：
+
+- **灵活性：** 可以根据项目的需求实现各种自定义的构建流程，例如代码注入、字节码操作、资源处理等。
+- **可扩展性：** 多个 Transform 可以串联使用，依次处理输入并生成输出，允许组合多个步骤的转换。
+- **性能优化：** Transform 可以在输入和输出阶段进行增量处理，只处理发生变化的部分，从而提高构建性能。
+
+Transform 在 Android Gradle 构建系统中扮演了重要的角色，让开发者能够更灵活地定制和优化 Android 应用的构建流程。
+
+
+
+Android Gradle Transform 详解  https://www.jianshu.com/p/cf90c557b866
+
+手把手教你实现一个 Gradle Transform 实例  https://www.jianshu.com/p/c6863aca4f2d
+
+Android 自定义Gradle插件的3种方式 https://www.jianshu.com/p/f902b51e242b
+
 
 
 
